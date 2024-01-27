@@ -128,7 +128,6 @@ export default function FormScreen() {
       {!!erroMensagem && <Text style={styles.erroTexto}>{erroMensagem}</Text>}
 
       <Button title="Enviar" onPress={handleSubmit} />
-      <Toast ref={(ref) => Toast.setRef(ref)} />
     </View>
   );
 }
