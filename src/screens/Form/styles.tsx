@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#101010',
+    backgroundColor: '#000',
     color: '#fff',
     flex: 1,
     padding: 20,
@@ -23,6 +23,7 @@ export const styles = StyleSheet.create({
   },
   textArea: {
     height: 100,
+    marginBottom: 25,
   },
   erroTexto: {
     color: 'red',
