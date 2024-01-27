@@ -24,6 +24,14 @@ eficiente.
 - Comunicação de Sucesso: Após o envio bem-sucedido do formulário, toasts são
   utilizados para comunicar de forma clara e amigável o êxito da operação.
 
+## Demonstração
+
+
+
+https://github.com/Amadeo-Frontend/React-native__bat-signal/assets/104178969/24d3465b-77f4-49af-9cbd-12fcd2a0fea8
+
+
+
 ## Tecnologias Utilizadas
 
 - React Native: Plataforma de desenvolvimento móvel que utiliza JavaScript e
