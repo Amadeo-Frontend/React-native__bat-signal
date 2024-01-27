@@ -32,17 +32,23 @@ export default function FormScreen() {
   const handleSubmit = () => {
     if (validarFormulario()) {
       console.log({ nome, email, telefone, mensagem });
-      // Exibe o Toast
       Toast.show({
         type: 'success',
         text1: 'Formulário enviado!',
         text2: 'Sua mensagem foi enviada com sucesso.',
         onHide: () => {
-          // Navega para a página inicial depois que o Toast desaparecer
           navigation.navigate('Home');
         },
       });
     }
+  };
+
+  const handleErroToast = (mensagemErro: string) => {
+    Toast.show({
+      type: 'error',
+      text1: 'Erro no formulário',
+      text2: mensagemErro,
+    } as any);
   };
 
   const validarFormulario = () => {
@@ -75,6 +81,10 @@ export default function FormScreen() {
       erro = true;
     }
 
+    if (erro) {
+      handleErroToast('Por favor, corrija os erros no formulário.');
+    }
+
     return !erro;
   };
 
@@ -93,6 +103,7 @@ export default function FormScreen() {
         value={nome}
         onChangeText={setNome}
         placeholder="Digite seu nome"
+        placeholderTextColor="gray" // Definindo a cor cinza para o placeholder
       />
       {!!erroNome && <Text style={styles.erroTexto}>{erroNome}</Text>}
 
@@ -103,6 +114,7 @@ export default function FormScreen() {
         onChangeText={setEmail}
         placeholder="Digite seu email"
         keyboardType="email-address"
+        placeholderTextColor="gray"
       />
       {!!erroEmail && <Text style={styles.erroTexto}>{erroEmail}</Text>}
 
@@ -113,6 +125,7 @@ export default function FormScreen() {
         onChangeText={setTelefone}
         placeholder="Digite seu telefone"
         keyboardType="phone-pad"
+        placeholderTextColor="gray"
       />
       {!!erroTelefone && <Text style={styles.erroTexto}>{erroTelefone}</Text>}
 
@@ -124,6 +137,7 @@ export default function FormScreen() {
         placeholder="Descreva a emergência"
         multiline
         numberOfLines={4}
+        placeholderTextColor="gray"
       />
       {!!erroMensagem && <Text style={styles.erroTexto}>{erroMensagem}</Text>}
 
