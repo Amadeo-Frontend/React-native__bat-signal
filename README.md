@@ -51,8 +51,11 @@ https://github.com/Amadeo-Frontend/React-native__bat-signal/assets/104178969/24d
 
 ## Instruções de Uso
 
-Clone este repositório. Instale as dependências utilizando npm install ou yarn
-install. Execute a aplicação com npx expo start.
+- Clone este repositório.
+- Instale as dependências utilizando npm install ou yarn
+install.
+- Instale em seu celular o app expo go.
+- Execute a aplicação com npx expo start.
 
 ## Contribuição
 
